@@ -20,6 +20,8 @@ class ArquivoTest extends \PHPUnit_Framework_TestCase
         
         $this->assertEquals(75,$detalheRO->getValorBruto());
         $this->assertEquals(73.50,$detalheRO->getValorLiquido());
+
+        $this->assertEquals(3,$arquivo->getTrailer()->getTotalDeRegistros());
         
         /*
         $this->assertEquals(9, $arquivo->getContaDac());
