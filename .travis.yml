@@ -1,5 +1,4 @@
 language: php
-script: phpunit --verbose --coverage-text
 
 php:
   - 5.3
@@ -9,8 +8,3 @@ php:
 before_script:
   - "composer install -v"
 
-after_script:
-  - "phpunit --testdox"
-
-after_script:
-  - "phpunit --testdox"
