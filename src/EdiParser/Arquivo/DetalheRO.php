@@ -112,6 +112,10 @@ class DetalheRO extends LinhaAbstract{
 		$this->dtCaptura = $dtCaptura;
 		return $this;
 	}
+	public function getDetalhesCV() {
+		return $this->detalhesCV;
+	}
+	
 	
 	
 	
