@@ -15,8 +15,4 @@ after_script:
 after_script:
   - "phpunit --testdox"
   - "phpunit --coverage-clover build/logs/clover.xml"
-  - "vendor/bin/test-reporter --stdout > codeclimate.json; curl -X POST -d @codeclimate.json -H 'Content-Type: application/json' -H 'User-Agent: Code Climate (PHP Test Reporter v0.1.1)' https://codeclimate.com/test_reports"
-
-addons:
-  code_climate:
-    repo_token: f25cc624257cbdc2f5a89cf12776a18aca88fa9702091320e85cacdfa612fdf
+  - "CODECLIMATE_REPO_TOKEN=0f25cc624257cbdc2f5a89cf12776a18aca88fa9702091320e85cacdfa612fdf ./vendor/bin/test-reporter"
