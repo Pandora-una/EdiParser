@@ -25,7 +25,7 @@ class Arquivo {
 		
 		$lastDetalheRO = null;
 		
-		if (ArquivoValidator::validate($linhas)) {
+		if (ArquivoValidator::validate($filename)) {
 			foreach ($linhas as $linha) {
 				switch ($linha[0]) {
 					case self::TIPO_HEADER:
