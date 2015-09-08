@@ -11,9 +11,8 @@ class DetalheRO extends LinhaAbstract{
 			'valorRejeitado'=>array('i'=>72,'t'=>14,'type'=>'currency'),
 			'valorLiquido'=> array('i'=>86,'t'=>14,'type'=>'currency'),
 			'statusPagamento' => array('i'=>123,'t'=>2),
+			'origemDoAjuste' => array('i'=>146,'t'=>2),
 			'dtCaptura' =>array('i'=>140,'t'=>6,'type'=>'smalldate')
-			
-			//	'dtProcessamento'=>array('i'=>12,'t'=>19,'type'=>'date')
 	);
 	
 	const TRANSACAO_VENDA = 1;
@@ -39,6 +38,8 @@ class DetalheRO extends LinhaAbstract{
 	protected $valorLiquido;
 	protected $dtPrevPagamento;
 	protected $dtCaptura;
+	
+	protected $origemDoAjuste;
 	
 	
 	public function addDetalheCV(DetalheCV $detalheCV) {
@@ -115,10 +116,11 @@ class DetalheRO extends LinhaAbstract{
 	public function getDetalhesCV() {
 		return $this->detalhesCV;
 	}
-	
-	
-	
-	
-	
-
+	public function getOrigemDoAjuste() {
+		return $this->origemDoAjuste;
+	}
+	public function setOrigemDoAjuste($origemDoAjuste) {
+		$this->origemDoAjuste = $origemDoAjuste;
+		return $this;
+	}
 }

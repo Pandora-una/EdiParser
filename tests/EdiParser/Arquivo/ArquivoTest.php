@@ -18,6 +18,8 @@ class ArquivoTest extends \PHPUnit_Framework_TestCase
         $detalheRO = $detalheRO[0];
         /* @var $detalheRO \EdiParser\Arquivo\DetalheRO */
         
+        $this->assertEquals('  ',$detalheRO->getOrigemDoAjuste());
+ 
         $this->assertEquals(75,$detalheRO->getValorBruto());
         $this->assertEquals(73.50,$detalheRO->getValorLiquido());
 
@@ -44,7 +46,10 @@ class ArquivoTest extends \PHPUnit_Framework_TestCase
     	$detalheRO = $arquivo->getDetalhesRO();
     	$detalheRO = $detalheRO[0];
     	/* @var $detalheRO \EdiParser\Arquivo\DetalheRO */
-    
+
+    	$this->assertEquals('  ',$detalheRO->getOrigemDoAjuste());
+    	
+    	
     	$this->assertEquals(150,$detalheRO->getValorBruto());
     	$this->assertEquals(144.44,$detalheRO->getValorLiquido());
     
