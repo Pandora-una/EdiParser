@@ -123,4 +123,7 @@ class DetalheRO extends LinhaAbstract{
 		$this->origemDoAjuste = $origemDoAjuste;
 		return $this;
 	}
+	public function isAjuste() {
+		return (trim($this->getOrigemDoAjuste()) != '');
+	}
 }
