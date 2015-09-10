@@ -5,6 +5,7 @@ use EdiParser\Validator\ArquivoValidator;
 
 class Arquivo {
 	
+	protected $conteudo;
 	
 	protected $header;
 	
@@ -20,6 +21,8 @@ class Arquivo {
 	public function __construct($filename) {
 		if (!file_exists($filename))
 			throw new \Exception("Arquivo '$filename' não encontrado");
+		
+		$this->conteudo = file_get_contents($filename);
 		
 		$linhas = file($filename);
 		
@@ -77,6 +80,14 @@ class Arquivo {
 		$this->trailer = $trailer;
 		return $this;
 	}
+	public function getConteudo() {
+		return $this->conteudo;
+	}
+	public function setConteudo($conteudo) {
+		$this->conteudo = $conteudo;
+		return $this;
+	}
+	
 	
 	
 	

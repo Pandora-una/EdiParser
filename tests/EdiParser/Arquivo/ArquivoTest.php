@@ -9,6 +9,7 @@ class ArquivoTest extends \PHPUnit_Framework_TestCase
     {
         $arquivo = new Arquivo('tests/fixtures/PagamentoComCV/valido.cmp');
         $this->assertNotNull($arquivo);
+        $this->assertNotNull($arquivo->getConteudo());
         $this->assertNotNull($arquivo->getHeader());
         $this->assertNotNull($arquivo->getDetalhesRO());
         $this->assertNotNull($arquivo->getTrailer());
@@ -38,7 +39,7 @@ class ArquivoTest extends \PHPUnit_Framework_TestCase
     {
     	$arquivo = new Arquivo('tests/fixtures/VendaComCVMaisParceladoFuturo/valido.cmp');
     	$this->assertNotNull($arquivo);
-    	
+    	$this->assertNotNull($arquivo->getConteudo());
     	$this->assertNotNull($arquivo->getHeader());
     	$this->assertNotNull($arquivo->getDetalhesRO());
     	$this->assertNotNull($arquivo->getTrailer());
