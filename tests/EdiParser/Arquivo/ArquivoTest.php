@@ -18,7 +18,7 @@ class ArquivoTest extends \PHPUnit_Framework_TestCase
         $detalheRO = $arquivo->getDetalhesRO();
         $detalheRO = $detalheRO[0];
         /* @var $detalheRO \EdiParser\Arquivo\DetalheRO */
-        
+                
         $this->assertEquals(false, $detalheRO->isAjuste());
         $this->assertEquals('  ',$detalheRO->getOrigemDoAjuste());
  
