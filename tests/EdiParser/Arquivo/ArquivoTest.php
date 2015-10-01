@@ -25,6 +25,7 @@ class ArquivoTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals(75,$detalheRO->getValorBruto());
         $this->assertEquals(73.50,$detalheRO->getValorLiquido());
 
+        $this->assertEquals(2,$detalheRO->getTaxaDeComissao());
         $this->assertEquals(3,$arquivo->getTrailer()->getTotalDeRegistros());
         
         $detalheCV = $detalheRO->getDetalhesCV();
@@ -55,6 +56,8 @@ class ArquivoTest extends \PHPUnit_Framework_TestCase
     	$this->assertEquals(150,$detalheRO->getValorBruto());
     	$this->assertEquals(144.44,$detalheRO->getValorLiquido());
     
+
+    	$this->assertEquals(3.7,$detalheRO->getTaxaDeComissao());
     	
     	$this->assertEquals(34,$arquivo->getTrailer()->getTotalDeRegistros());
     

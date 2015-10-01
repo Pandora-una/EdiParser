@@ -13,6 +13,7 @@ class DetalheRO extends LinhaAbstract{
 			'statusPagamento' => array('i'=>123,'t'=>2),
 			'origemDoAjuste' => array('i'=>146,'t'=>2),
 			'dtCaptura' =>array('i'=>140,'t'=>6,'type'=>'smalldate'),
+			'taxaDeComissao' => array('i'=>210,'t'=>4,'type'=>'currency'),
 			'tarifa' => array('i'=>214,'t'=>5,'type'=>'currency')
 	);
 	
@@ -43,6 +44,7 @@ class DetalheRO extends LinhaAbstract{
 	protected $origemDoAjuste;
 	
 	protected $tarifa;
+	protected $taxaDeComissao;
 	
 	public function addDetalheCV(DetalheCV $detalheCV) {
 		$this->detalhesCV[] = $detalheCV;
@@ -135,5 +137,13 @@ class DetalheRO extends LinhaAbstract{
 		$this->tarifa = $tarifa;
 		return $this;
 	}
+	public function getTaxaDeComissao() {
+		return $this->taxaDeComissao;
+	}
+	public function setTaxaDeComissao($taxaDeComissao) {
+		$this->taxaDeComissao = $taxaDeComissao;
+		return $this;
+	}
+	
 	
 }
