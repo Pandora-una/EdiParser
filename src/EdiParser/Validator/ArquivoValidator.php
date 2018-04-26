@@ -12,7 +12,7 @@ class ArquivoValidator {
 		$header = $linhas[0];
 		if (substr($header, 42,5) != 'CIELO')
 			return false;
-		if (substr($header, 70,3) != '001')
+		if (substr($header, 70,3) != '013')
 			return false;
 		return true;
 	}
